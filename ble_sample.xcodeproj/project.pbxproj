@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2177DFC6207E78BD001B5750 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2177DFC5207E78BD001B5750 /* CoreBluetooth.framework */; };
 		21A33248207E3A0900DDE9A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A33247207E3A0900DDE9A8 /* AppDelegate.swift */; };
 		21A3324A207E3A0900DDE9A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A33249207E3A0900DDE9A8 /* ViewController.swift */; };
 		21A3324D207E3A0900DDE9A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A3324B207E3A0900DDE9A8 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2177DFC1207E784F001B5750 /* ble_sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ble_sample.entitlements; sourceTree = "<group>"; };
+		2177DFC5207E78BD001B5750 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		21A33244207E3A0900DDE9A8 /* ble_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ble_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A33247207E3A0900DDE9A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A33249207E3A0900DDE9A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2177DFC6207E78BD001B5750 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2177DFC2207E7859001B5750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2177DFC5207E78BD001B5750 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21A3323B207E3A0900DDE9A8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 				21A3325B207E3A0B00DDE9A8 /* ble_sampleTests */,
 				21A33266207E3A0B00DDE9A8 /* ble_sampleUITests */,
 				21A33245207E3A0900DDE9A8 /* Products */,
+				2177DFC2207E7859001B5750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +110,7 @@
 		21A33246207E3A0900DDE9A8 /* ble_sample */ = {
 			isa = PBXGroup;
 			children = (
+				2177DFC1207E784F001B5750 /* ble_sample.entitlements */,
 				21A33247207E3A0900DDE9A8 /* AppDelegate.swift */,
 				21A33249207E3A0900DDE9A8 /* ViewController.swift */,
 				21A3324B207E3A0900DDE9A8 /* Main.storyboard */,
@@ -193,6 +207,17 @@
 				TargetAttributes = {
 					21A33243207E3A0900DDE9A8 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					21A33257207E3A0B00DDE9A8 = {
 						CreatedOnToolsVersion = 9.3;
